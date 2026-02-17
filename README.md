@@ -4,7 +4,7 @@
 
 ## Neuro-dynamic Stability Mapping & ADHD Classification
 
-This project implements a **"Digital Twin"** approach to computational neuroscience, using EEG data to model and simulate the dynamic stability of neural signals. By training individual neural networks (Digital Twins) on specific EEG channels, the notebook analyzes the inherent stability of brain regions in Neurotypical vs. ADHD subjects.
+This project implements a **Digital Twin** approach to computational neuroscience, using EEG data to model and simulate the dynamic stability of neural signals. By training individual neural networks (Digital Twins) on specific EEG channels, the notebook analyzes the inherent stability of brain regions in Neurotypical vs. ADHD subjects.
 
 Additionally, the project includes a traditional machine learning pipeline for classifying ADHD based on extracted EEG features.
 
@@ -52,9 +52,9 @@ Instead of just classifying data, we create a simulation of the data source.
 
 1. **Training:** For a given EEG channel (e.g., `Fz`), a small neural network is trained to predict  given .
 2. **Simulation:** Once trained, the network effectively "becomes" a digital replica of that brain region's signal dynamics.
-3. **Stability Testing:** We inject noise into the Twin and iterate it forward.
+3. **Variabiloty Testing:** We inject noise into the Twin and iterate it forward.
 * **Stable Brain:** The signal returns to baseline or oscillates predictably.
-* **Unstable Brain:** The signal drifts significantly or diverges.
+* **Variable Brain:** The signal drifts significantly or diverges.
 
 
 4. **Metric:** The "Variability Score" is calculated as the cumulative drift over time.
@@ -97,7 +97,7 @@ pip install numpy pandas matplotlib scikit-learn scipy torch tqdm
 * **Console:** Prints classification accuracy and Digital Twin training progress.
 * **Plots:**
 * Decision Boundaries (PCA projection).
-* Brain Head Maps (Stability comparisons).
+* Brain Head Maps (Variability comparisons).
 
 
 
